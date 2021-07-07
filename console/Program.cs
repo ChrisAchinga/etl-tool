@@ -10,7 +10,9 @@ namespace etl
         {
             try
             {
-                String st = File.ReadAllText("../data/sample.tsv");
+                var fileName = "../data/companies-encrypted.tsv";
+                File.Decrypt(fileName);
+                String st = File.ReadAllText(fileName);
                 Console.WriteLine(st);
             }
             catch (System.Exception e)
