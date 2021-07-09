@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "XJuznD3rBgP0jP3rjh2z7sKxD06893E/QTPwx37Cdpc5rwoALZ/RAUteP09H4NkSTeIVov2gBTA8I5vJkMSaNg==",
+  "dgSpecHash": "QS5O6Nq2D7jhxQcEGXtWvbSWt2eRxf+6NciiwsXiDznoKZ9poR1aZ1kNLCWKOdA6UEiPdMCtC4pa02WxRtPP8w==",
   "success": true,
-  "projectFilePath": "/home/dev/projects/etl-tool/console/console.csproj",
+  "projectFilePath": "/home/notebook/project/etl-tool/console/console.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }
