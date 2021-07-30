@@ -16,16 +16,15 @@ namespace etl
                     var encryptFile = File.ReadAllText(fileName);
                     byte[] decryptFile = Convert.FromBase64String(encryptFile);
                     string decodedFile = Encoding.Unicode.GetString(decryptFile);
-
                     Console.WriteLine(decodedFile);
                 }
-                getFileDecryption("../data/companies-encrypted.tsv");
-                getFileDecryption("../data/devices-encrypted.tsv");
+                getFileDecryption("./data/companies-encrypted.tsv");
+                getFileDecryption("./data/devices-encrypted.tsv");
                 
             }
             catch (System.Exception e)
             {
-                Console.WriteLine("Database operations failed");
+                Console.WriteLine("File operations failed");
                 Console.WriteLine(e.Message);
             }
             

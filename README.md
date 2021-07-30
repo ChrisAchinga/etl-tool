@@ -14,3 +14,6 @@
 - VueJS: clientside
 - GitHub
 
+# Running the Program
+
+dotnet run --no-restore
