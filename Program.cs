@@ -18,6 +18,10 @@ namespace etl
                     string decodedFile = Encoding.Unicode.GetString(decryptFile);
                     Console.WriteLine(decodedFile);
                 }
+
+                // var companies = getFileDecryption("./data/companies-encrypted.tsv");
+                // var devices = getFileDecryption("./data/devices-encrypted.tsv");
+                // getting Cannot assign void to an implicitly-typed variable error
                 getFileDecryption("./data/companies-encrypted.tsv");
                 getFileDecryption("./data/devices-encrypted.tsv");
                 
