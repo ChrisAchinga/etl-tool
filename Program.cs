@@ -12,15 +12,11 @@ namespace etl
             // creating a function to get the files and encode them
             try
             {
-                static void getFileDecryption(string  fileName) {
-                    var encryptFile = File.ReadAllText(fileName);
-                    byte[] decryptFile = Convert.FromBase64String(encryptFile);
-                    string decodedFile = Encoding.Unicode.GetString(decryptFile);
-                    Console.WriteLine(decodedFile);
-                }
-                getFileDecryption("./data/companies-encrypted.tsv");
-                getFileDecryption("./data/devices-encrypted.tsv");
-                
+                var fileParser = new FileParser();
+                fileParser.Parse("./somefile.tsv");
+
+                var decodedCompanies = getFileDecryption("./data/companies-encrypted.tsv");
+                var decodedDevices = getFileDecryption("./data/devices-encrypted.tsv");
             }
             catch (System.Exception e)
             {
@@ -30,5 +26,16 @@ namespace etl
             
             Console.Read();
         }
+        
+        static string getFileDecryption(string  fileName) {
+            var encryptFile = File.ReadAllText(fileName);
+            byte[] decryptFile = Convert.FromBase64String(encryptFile);
+            string decodedFile = Encoding.Unicode.GetString(decryptFile);
+            Console.WriteLine(decodedFile);
+
+            return decodedFile;
+        }
+        
+        
     }
 }
