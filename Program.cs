@@ -17,7 +17,18 @@ namespace etl
             Console.WriteLine(decodedFile);
 
             var lines = File.ReadAllLines("./data/devices.tsv");
-            var csv = lines.Select(row => string.Join(",", Format(row).Split('\t')));            
+            //var csv = lines.Select(row => string.Join(",", Format(row).Split('\t')));   
+            
+            foreach (var line in lines)
+            {
+                var columns = line.Split('\t');
+                Console.WriteLine($"Line: \"{line}\"");
+                foreach (var column in columns)
+                {
+                    Console.WriteLine(column);
+                }
+            }
+            
             Console.Read();
         }
     }
