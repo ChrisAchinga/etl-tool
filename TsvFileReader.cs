@@ -5,25 +5,25 @@ using System.Linq;
 using System.Collections.Generic;
 
 namespace etl {
-    public class Data
+    public class TsvFileReader
     {
         /// <summary>
         /// A method to map data to lists
         /// </summary>
-        public dataList(string file)
+        public List<List<string>> Read(string filePath)
         {
             // creating rows with "name ..."
 
-            // Unsplitted rows
-            var unsplittedRows = file.Split(new[] { "\r\n", "\r", "\n" }, StringSplitOptions.None);
-            var splittedRows = new List<List<string>>();
+            // // Unsplitted rows
+            // var unsplittedRows = file.Split(new[] { "\r\n", "\r", "\n" }, StringSplitOptions.None);
+             var splittedRows = new List<List<string>>();
 
-            var lines = File.ReadAllLines(file);
+            var unsplittedRows = File.ReadAllLines(filePath);
 
             foreach (var unsplitttedRow in unsplittedRows)
             {
                 var row = new List<string>();
-                var columns = file.Split('\t');
+                var columns = unsplitttedRow.Split('\t');
 
                 foreach (var column in columns)
                 {

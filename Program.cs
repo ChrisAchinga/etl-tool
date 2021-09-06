@@ -34,8 +34,21 @@ namespace etl
             
             // 2. After data is mapped we can start with database and upload prepared models to the db.
             
-            Console.Read();
+            //Console.Read();
+
+            var data = new TsvFileReader();
+            var listOfLists = data.Read("./data/devices.tsv");
         }
+
+        /// <summary>
+        /// Says hello to the user with given name.
+        /// </summary>
+        /// <param name="username">The name of the user to say hello to.</param>
+        public static void HelloWorld(string username)
+        {
+            Console.WriteLine($"Hello, {username}!");
+        }
+        
     }
 }
 
